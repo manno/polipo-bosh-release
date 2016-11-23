@@ -1,0 +1,12 @@
+---
+name: http_proxy
+
+templates: 
+  ctl.erb: bin/ctl
+  dontcache: etc/polipo/dontcache
+  config: etc/polipo/config
+
+packages:
+  - polipo
+
+properties: {}
