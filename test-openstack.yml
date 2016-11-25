@@ -1,0 +1,36 @@
+---
+name: polipo-deployment
+
+director_uuid: 8dd454b1-27e2-4b18-b028-aa8fd2ddf55e
+
+releases:
+- name: polipo-release
+  version: latest
+
+instance_groups:
+- name: http_proxy
+  instances: 1
+  vm_type: medium
+  stemcell: default
+  azs: [z1]
+  networks:
+  - name: private
+    default: [dns, gateway]
+  - name: public
+    static_ips: [10.162.162.103]
+  persistent_disk: 0
+  jobs:
+  - name: http_proxy
+    release: polipo-release
+
+update:
+  canaries: 1
+  canary_watch_time: 1000-30000
+  max_in_flight: 50
+  serial: false
+  update_watch_time: 1000-30000
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest
