@@ -12,9 +12,8 @@ case $1 in
 
     echo $$ > $PIDFILE
 
-    cd /var/vcap/packages/polipo
-
-    exec bin/polipo \
+    exec /var/vcap/packages/polipo/bin/polipo \
+      -c /var/vcap/jobs/http_proxy/etc/polipo/config \
       >>  $LOG_DIR/polipo.stdout.log \
       2>> $LOG_DIR/polipo.stderr.log
 

@@ -2,8 +2,8 @@ set -e -x
 
 tar xzf polipo_1.1.1
 pushd polipo-polipo-1.1.1
-  ./configure --prefix=${BOSH_INSTALL_TARGET}
-
+  sed -i 's@PREFIX = /usr/local/@'$BOSH_INSTALL_TARGET'@' Makefile
   make
-  make install
+  mkdir -p $BOSH_INSTALL_TARGET/bin/
+  cp polipo $BOSH_INSTALL_TARGET/bin/
 popd
