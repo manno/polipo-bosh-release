@@ -1,0 +1,15 @@
+name: polipo-bosh-release
+version: "2"
+commit_hash: fe86ca3
+uncommitted_changes: false
+jobs:
+- name: http_proxy
+  version: 18eb6063becb42bf59430f114b0f653de89d2855
+  fingerprint: 18eb6063becb42bf59430f114b0f653de89d2855
+  sha1: ba38651d94389838a0dcf9bc01f8dc161b49fa22
+packages:
+- name: polipo
+  version: b15c7d7245a8305b0efc20ef9a1f91b4954991f8
+  fingerprint: b15c7d7245a8305b0efc20ef9a1f91b4954991f8
+  sha1: cea08b62bfd05a050cb321e9508a075c81b1de3a
+  dependencies: []

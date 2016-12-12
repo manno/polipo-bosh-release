@@ -1,0 +1,8 @@
+builds:
+  8854de48-57c0-4de4-4b64-9a125670c9d8:
+    version: "3"
+  b7457e32-f218-4d5a-68e1-f8792dbd53c1:
+    version: "1"
+  ecffa7c7-e885-4693-5b03-791bc3631c52:
+    version: "2"
+format-version: "2"
