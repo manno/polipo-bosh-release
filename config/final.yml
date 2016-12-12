@@ -1,1 +1,5 @@
-final_name: polipo-release
+blobstore:
+  provider: local
+  options:
+    blobstore_path: tmp/blobstore
+final_name: polipo-bosh-release
