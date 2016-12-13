@@ -2,7 +2,7 @@
 name: polipo-deployment
 director_uuid: 93c01d2d-a2a5-49d8-8d02-389fd223a9cf
 releases:
-- {name: polipo-release, version: latest}
+- {name: polipo-bosh-release, version: latest}
 
 
 resource_pools:
@@ -44,8 +44,11 @@ jobs:
 - name: http_proxy
   template: http_proxy
   instances: 1
-  release: polipo-release
+  release: polipo-bosh-release
   resource_pool: common-resource-pool
+  properties:
+    http_proxy:
+      allowed_clients: 127.0.0.1, 0.0.0.0/0
   networks:
     - name: public
       static_ips:

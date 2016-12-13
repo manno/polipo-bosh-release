@@ -1,12 +1,16 @@
 ---
 name: http_proxy
 
-templates: 
+templates:
   ctl.erb: bin/ctl
   dontcache: etc/polipo/dontcache
+  forbidden: etc/polipo/forbidden
   config: etc/polipo/config
 
 packages:
   - polipo
 
-properties: {}
+properties:
+   http_proxy.allowed_clients:
+     description: List of IP ranges with access to the proxy
+     default: 127.0.0.1, 172.17.0.0/16

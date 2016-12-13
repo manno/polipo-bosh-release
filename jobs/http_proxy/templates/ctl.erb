@@ -2,13 +2,14 @@
 
 RUN_DIR=/var/vcap/sys/run/http_proxy
 LOG_DIR=/var/vcap/sys/log/http_proxy
+DATA_DIR=/var/vcap/data/cache
 PIDFILE=${RUN_DIR}/pid
 
 case $1 in
 
   start)
-    mkdir -p $RUN_DIR $LOG_DIR
-    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+    mkdir -p $RUN_DIR $LOG_DIR $DATA_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR $DATA_DIR
 
     echo $$ > $PIDFILE
 
