@@ -42,7 +42,7 @@ allowedClients = <%= p('allowed_clients') %>
 
 # Uncomment this if there's only one user using this instance of Polipo:
 
-# cacheIsShared = false
+cacheIsShared = false
 
 # Uncomment this if you want to use a parent proxy:
 
@@ -55,7 +55,8 @@ allowedClients = <%= p('allowed_clients') %>
 
 # Uncomment this if you want to scrub private information from the log:
 
-# scrubLogs = true
+scrubLogs = false
+logLevel = 255
 
 
 ### Memory
@@ -83,11 +84,11 @@ allowedClients = <%= p('allowed_clients') %>
 # Uncomment this if you want to put the on-disk cache in a
 # non-standard location:
 
-diskCacheRoot = "/var/vcap/data/cache"
+diskCacheRoot = "/var/vcap/data/cache/"
 
 # Uncomment this if you want to disable the local web server:
 
-localDocumentRoot = ""
+localDocumentRoot = "/var/vcap/data/cache/"
 
 # Uncomment this if you want to enable the pages under /polipo/index?
 # and /polipo/servers?.  This is a serious privacy leak if your proxy

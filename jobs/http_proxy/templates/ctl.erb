@@ -9,7 +9,9 @@ case $1 in
 
   start)
     mkdir -p $RUN_DIR $LOG_DIR $DATA_DIR
-    chown -R vcap:vcap $RUN_DIR $LOG_DIR $DATA_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+    chown -R root:root $DATA_DIR
+    chmod 0700 $DATA_DIR
 
     echo $$ > $PIDFILE
 
