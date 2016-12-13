@@ -87,7 +87,7 @@ diskCacheRoot = "/var/vcap/data/cache"
 
 # Uncomment this if you want to disable the local web server:
 
-# localDocumentRoot = ""
+localDocumentRoot = ""
 
 # Uncomment this if you want to enable the pages under /polipo/index?
 # and /polipo/servers?.  This is a serious privacy leak if your proxy
