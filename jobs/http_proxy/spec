@@ -11,6 +11,6 @@ packages:
   - polipo
 
 properties:
-   http_proxy.allowed_clients:
-     description: List of IP ranges with access to the proxy
-     default: 127.0.0.1, 172.17.0.0/16
+  allowed_clients:
+    description: List of IP ranges with access to the proxy
+    default: 127.0.0.1, 172.17.0.0/16

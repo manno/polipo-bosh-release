@@ -47,8 +47,7 @@ jobs:
   release: polipo-bosh-release
   resource_pool: common-resource-pool
   properties:
-    http_proxy:
-      allowed_clients: 127.0.0.1, 0.0.0.0/0
+    allowed_clients: 127.0.0.1, 0.0.0.0/0
   networks:
     - name: public
       static_ips:
